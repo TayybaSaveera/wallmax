@@ -3,6 +3,8 @@ import Navbar from "./Navbar"; // Your Navbar component
 import HomePage from "./pages/Homepage"; // Your HomePage component
 import ProductCategory from "./components/ProductCategory";
 import CategoryPage from "./pages/Categorypage";
+import Product from "./pages/Product";
+import Footer from "./components/Footer";
 // Another example page
 
 const Layout = () => {
@@ -14,8 +16,10 @@ const Layout = () => {
           <Route path="/" element={<HomePage />} />
 
           <Route path="/category/:categoryName" element={<CategoryPage />} />
+          <Route path="/product/:productId" element={<Product />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 };

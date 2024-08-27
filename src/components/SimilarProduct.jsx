@@ -1,8 +1,8 @@
 import React from "react";
 import Item from "./Item";
 import product from "../assets/db";
-
-function NewArrivals() {
+import { Link } from "react-router-dom";
+function SimilarProduct() {
   const slideleft = () => {
     var slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft - 500;
@@ -15,7 +15,7 @@ function NewArrivals() {
     <div className="mb-10 lg:mx-5 sm:mx-0">
       <div className="my-10">
         <h1 className="font-bold text-3xl capitalize text-center">
-          New arrivals
+          Similar products
         </h1>
       </div>
       <div className="relative flex items-center">
@@ -41,19 +41,17 @@ function NewArrivals() {
           className="w-full h-full overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide"
         >
           {product.map((item, index) => (
-            <div
-              key={index}
-              className="w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300"
-            >
-              <img
-                src={item.image}
-                alt={item.title}
-                onClick={window.scrollTo(0, 0)} // Adding alt for accessibility
-              />
-              {/* Uncomment if needed */}
-              <p>{item.title}</p>
-              <p>{item.price}</p>
-            </div>
+            <Link key={index} to={`/product/${item.id}`}>
+              <div className="w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  onClick={window.scrollTo(0, 0)}
+                />
+                <p className="text-wrap">{item.title}</p>
+                <p>{item.price}</p>
+              </div>
+            </Link>
           ))}
         </div>
         <svg
@@ -74,14 +72,8 @@ function NewArrivals() {
           <path d="M9 6l6 6l-6 6" />
         </svg>
       </div>
-
-      <div className="text-center mt-6">
-        <button className="btn uppercase bg-rose-500 px-6 py-2 text-white">
-          explore more
-        </button>
-      </div>
     </div>
   );
 }
 
-export default NewArrivals;
+export default SimilarProduct;

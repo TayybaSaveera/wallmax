@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "./assets/logo.svg";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
@@ -7,10 +8,13 @@ function Navbar() {
     setIsVisible(true);
   };
   return (
-    <div className="flex justify-between mt-2 py-3 lg:px-6 sm:px-2 shadow-lg items-center">
-      <div>
-        <img src={logo} alt="Logo" className="max-w-28 max-h-28" />
-      </div>
+    <div className="flex justify-between mt-2 py-3 lg:px-6 sm:px-2 shadow-lg items-center w-full">
+      <Link to="/">
+        <div>
+          <img src={logo} alt="Logo" className="max-w-28 max-h-28" />
+        </div>
+      </Link>
+
       <div className="search lg:mr-5  sm:mr-2  ">
         {/* <div >
           <input

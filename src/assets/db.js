@@ -18,7 +18,7 @@ let products = [
   {
     id: 3,
     image: p1,
-    title: "Bluetooth Speaker",
+    title: "Closeup Oil Paint | Abstract Wallpaper Mural",
     category: "home",
     price: 29.99,
   },

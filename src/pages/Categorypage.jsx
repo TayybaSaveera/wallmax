@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import products from "../assets/db"; // Assume this is your product data
-
+import { Link } from "react-router-dom";
 function Categorypage() {
   const { categoryName } = useParams(); // Accessing the category from the URL
 
@@ -20,11 +20,13 @@ function Categorypage() {
       <div className="mt-12 gap-3 grid lg:grid-cols-4 sm:grid-cols-2">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
-            <div key={product.id} className="card bg-gray-100 p-5 rounded-lg">
-              <img src={product.image} alt={product.title} />
-              <h2 className="text-lg font-bold">{product.title}</h2>
-              <p className="text-gray-600">Rs {product.price}</p>
-            </div>
+            <Link key={product.id} to={`/product/${product.id}`}>
+              <div key={product.id} className="card bg-gray-100 p-5 rounded-lg">
+                <img src={product.image} alt={product.title} />
+                <h2 className="text-lg font-bold">{product.title}</h2>
+                <p className="text-gray-600">Rs {product.price}</p>
+              </div>
+            </Link>
           ))
         ) : (
           <p>No products found in this category.</p>

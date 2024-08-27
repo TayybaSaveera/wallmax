@@ -16,7 +16,6 @@ function homePage() {
       <BestSelling />
       <NewArrivals />
       <Customerfeedback />
-      <Footer />
     </div>
   );
 }
