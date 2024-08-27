@@ -19,7 +19,7 @@ function NewArrivals() {
         </h1>
       </div>
       <div className="relative flex items-center">
-        <svg
+      <svg
           onClick={slideleft}
           className="opacity-50 cursor-pointer hover:opacity-100 bg-red-400 lg:mx-4 sm:mx-4"
           xmlns="http://www.w3.org/2000/svg"
@@ -27,23 +27,22 @@ function NewArrivals() {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M15 6l-6 6l6 6" />
         </svg>
         <div
           id="slider"
-          className="w-full h-full overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide"
+          className="w-full h-full space-x-4 overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide"
         >
           {product.map((item, index) => (
             <div
               key={index}
-              className="w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300"
+              className="text-white bg-red-400/80 backdrop-blur-sm   rounded-lg shadow-black shadow-sm  w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300"
             >
               <img
                 src={item.image}
@@ -58,17 +57,16 @@ function NewArrivals() {
         </div>
         <svg
           onClick={slideRight}
-          className="opacity-50 cursor-pointer hover:opacity-100  bg-red-400  lg:mx-4 sm:mx-4"
+          className="opacity-50 cursor-pointer hover:opacity-100 bg-red-400 lg:mx-4 sm:mx-4"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M9 6l6 6l-6 6" />

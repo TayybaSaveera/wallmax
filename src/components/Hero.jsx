@@ -9,7 +9,9 @@ function Hero() {
           "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
       }}
     >
-      Hero
+      <h1 className="bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent md:text-9xl text-6xl font-extrabold">
+      WALLMAX
+      </h1>
     </div>
   );
 }

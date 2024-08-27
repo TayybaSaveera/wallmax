@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 function Item(props) {
   return (
-    <div className="lg:w-64 sm:w-28 h-80 hover:scale-100  overflow-hidden ">
+    <div className="text-white my-4 bg-red-400/80 backdrop-blur-sm   rounded-lg shadow-black shadow-sm   hover:scale-100  overflow-hidden ">
       <Link to={`/product/${props.id}`}>
         <img
           src={props.image}
@@ -10,7 +10,7 @@ function Item(props) {
           onClick={window.scrollTo(0, 0)}
         />
       </Link>
-      <div className="px-4 py-4 text-center   text-black">
+      <div className="px-4 py-4 text-centertext-black">
         <p className="text-xl"> {props.title}</p>
         <p className="">Rs {props.price}</p>
       </div>
