@@ -5,14 +5,14 @@ let products = [
     id: 1,
     image: p1,
     title: "Wireless Headphones",
-    category: "electronics",
+    category: "office",
     price: 99.99,
   },
   {
     id: 2,
     image: p1,
     title: "Smartwatch",
-    category: "electronics",
+    category: "office",
     price: 149.99,
   },
   {

@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar"; // Your Navbar component
 import HomePage from "./pages/Homepage"; // Your HomePage component
+import ProductCategory from "./components/ProductCategory";
+import CategoryPage from "./pages/Categorypage";
 // Another example page
 
 const Layout = () => {
@@ -10,7 +12,8 @@ const Layout = () => {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* <Route path="/about" element={<AboutPage />} /> */}
+
+          <Route path="/category/:categoryName" element={<CategoryPage />} />
         </Routes>
       </main>
     </div>
