@@ -29,7 +29,7 @@ function SimilarProduct() {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
+          stroke="white"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -40,11 +40,11 @@ function SimilarProduct() {
 
         <div
           id="slider"
-          className="flex w-full h-full overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide"
+          className="text-white flex w-full h-full space-x-4 overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide"
         >
           {product.map((item, index) => (
             <Link key={index} to={`/product/${item.id}`}>
-              <div className="w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300">
+              <div className="bg-red-400/80 backdrop-blur-sm   rounded-lg shadow-black shadow-sm w-[220px] h-full inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -66,7 +66,7 @@ function SimilarProduct() {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
+          stroke="white"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"

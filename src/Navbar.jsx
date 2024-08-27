@@ -28,7 +28,7 @@ function Navbar() {
             <div className="search mr-5  flex rounded-full border-gray-500 border  px-2 py-2 gap-2 items-center">
               <input
                 type="text"
-                placeholder="serach... "
+                placeholder="search... "
                 className="mt-1 outline-none"
               />
               <svg

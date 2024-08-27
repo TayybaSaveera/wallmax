@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function CategoryItem(props) {
   return (
-    <div className="lg:w-72 sm:w-28 h-80 hover:scale-100 overflow-hidden">
+    <div className="rounded-lg hover:scale-100 overflow-hidden">
       <img
         src={props.image}
         className="transition-transform duration-300 ease-in-out transform hover:scale-105 hover:opacity-90"
