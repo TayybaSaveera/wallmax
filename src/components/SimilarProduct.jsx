@@ -1,16 +1,18 @@
 import React from "react";
-import Item from "./Item";
-import product from "../assets/db";
 import { Link } from "react-router-dom";
+import product from "../assets/db"; // Make sure this path is correct
+
 function SimilarProduct() {
-  const slideleft = () => {
+  const slideLeft = () => {
     var slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft - 500;
   };
+
   const slideRight = () => {
     var slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft + 500;
   };
+
   return (
     <div className="mb-10 lg:mx-5 sm:mx-0">
       <div className="my-10">
@@ -20,7 +22,7 @@ function SimilarProduct() {
       </div>
       <div className="relative flex items-center">
         <svg
-          onClick={slideleft}
+          onClick={slideLeft}
           className="opacity-50 cursor-pointer hover:opacity-100 bg-red-400 lg:mx-4 sm:mx-4"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -28,14 +30,14 @@ function SimilarProduct() {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M15 6l-6 6l6 6" />
         </svg>
+
         <div
           id="slider"
           className="w-full h-full overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide"
@@ -46,27 +48,28 @@ function SimilarProduct() {
                 <img
                   src={item.image}
                   alt={item.title}
-                  onClick={window.scrollTo(0, 0)}
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="w-full h-auto"
                 />
-                <p className="text-wrap">{item.title}</p>
+                <p className="truncate text-wrap font-semibold">{item.title}</p>
                 <p>{item.price}</p>
               </div>
             </Link>
           ))}
         </div>
+
         <svg
           onClick={slideRight}
-          className="opacity-50 cursor-pointer hover:opacity-100  bg-red-400  lg:mx-4 sm:mx-4"
+          className="opacity-50 cursor-pointer hover:opacity-100 bg-red-400 lg:mx-4 sm:mx-4"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M9 6l6 6l-6 6" />
