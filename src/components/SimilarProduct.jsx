@@ -40,7 +40,7 @@ function SimilarProduct() {
 
         <div
           id="slider"
-          className="w-full h-full overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide"
+          className="flex w-full h-full overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide"
         >
           {product.map((item, index) => (
             <Link key={index} to={`/product/${item.id}`}>
