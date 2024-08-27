@@ -1,7 +1,7 @@
 import React from "react";
 import customerFeedback from "../assets/feedback";
 
-function CustomerFeedback() {
+function Customerfeedback() {
   const slideLeft = () => {
     const slider = document.getElementById("sliderfeedback");
     slider.scrollLeft = slider.scrollLeft - 500;
@@ -85,4 +85,4 @@ function CustomerFeedback() {
   );
 }
 
-export default CustomerFeedback;
+export default Customerfeedback;

@@ -6,7 +6,8 @@ import ProductCategory from "../components/ProductCategory.jsx";
 import Footer from "../components/Footer.jsx";
 import BestSelling from "../components/BestSelling.jsx";
 import NewArrivals from "../components/NewArrivals.jsx";
-import CustomerFeedback from "../components/CustomerFeedback.jsx";
+import Customerfeedback from "../components/customerFeedback.jsx";
+
 function homePage() {
   return (
     <div>
@@ -14,7 +15,7 @@ function homePage() {
       <ProductCategory />
       <BestSelling />
       <NewArrivals />
-      <CustomerFeedback />
+      <Customerfeedback />
       <Footer />
     </div>
   );
