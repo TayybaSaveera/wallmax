@@ -6,7 +6,7 @@ import ProductCategory from "../components/ProductCategory.jsx";
 import Footer from "../components/Footer.jsx";
 import BestSelling from "../components/BestSelling.jsx";
 import NewArrivals from "../components/NewArrivals.jsx";
-import CustomerFeedback from "../components/customerFeedback.jsx";
+import CustomerFeedback from "../components/CustomerFeedback.jsx";
 function homePage() {
   return (
     <div>
