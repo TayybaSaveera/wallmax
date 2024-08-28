@@ -10,7 +10,7 @@ function Hero() {
       }}
     >
       <h1 className="bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent md:text-9xl text-6xl font-extrabold">
-      WALLMAX
+        WALLMAX
       </h1>
     </div>
   );

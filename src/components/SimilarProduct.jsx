@@ -14,13 +14,13 @@ function SimilarProduct() {
   };
 
   return (
-    <div className="mb-10 lg:mx-5 sm:mx-0">
+    <div className="mb-16  lg:mx-5 sm:mx-0 ">
       <div className="my-10">
         <h1 className="font-bold text-3xl capitalize text-center">
           Similar products
         </h1>
       </div>
-      <div className="relative flex items-center">
+      <div className="relative flex items-center my-5">
         <svg
           onClick={slideLeft}
           className="opacity-50 cursor-pointer hover:opacity-100 bg-red-400 lg:mx-4 sm:mx-4"
@@ -40,19 +40,21 @@ function SimilarProduct() {
 
         <div
           id="slider"
-          className="text-white flex w-full h-full space-x-4 overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide"
+          className="text-black flex w-full h-full space-x-4 overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide"
         >
           {product.map((item, index) => (
             <Link key={index} to={`/product/${item.id}`}>
-              <div className="bg-red-400/80 backdrop-blur-sm   rounded-lg shadow-black shadow-sm w-[220px] h-full inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300">
+              <div className="bg-white backdrop-blur-sm rounded-sm  shadow-gray-400 shadow w-[260px] h-full inline-block  cursor-pointer overflow-hidden ">
                 <img
                   src={item.image}
                   alt={item.title}
                   onClick={() => window.scrollTo(0, 0)}
-                  className="w-full h-auto"
+                  className="w-full h-auto hover:scale-105 ease-in-out duration-300 "
                 />
-                <p className="truncate text-wrap font-semibold">{item.title}</p>
-                <p>{item.price}</p>
+                <p className="text-black/80 truncate text-wrap  px-2 pt-2">
+                  {item.title}
+                </p>
+                <p className="px-2 text-center font-medium">Rs. {item.price}</p>
               </div>
             </Link>
           ))}

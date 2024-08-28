@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "./Item";
 import product from "../assets/db";
-
+import { Link } from "react-router-dom";
 function NewArrivals() {
   const slideleft = () => {
     var slider = document.getElementById("slider");
@@ -12,14 +12,14 @@ function NewArrivals() {
     slider.scrollLeft = slider.scrollLeft + 500;
   };
   return (
-    <div className="mb-10 lg:mx-5 sm:mx-0">
+    <div className="mb-16 lg:mx-5 sm:mx-0">
       <div className="my-10">
-        <h1 className="font-bold text-3xl capitalize text-center">
+        <h1 className="  font-bold text-3xl capitalize text-center">
           New arrivals
         </h1>
       </div>
-      <div className="relative flex items-center">
-      <svg
+      <div className="relative flex items-center my-5">
+        <svg
           onClick={slideleft}
           className="opacity-50 cursor-pointer hover:opacity-100 bg-red-400 lg:mx-4 sm:mx-4"
           xmlns="http://www.w3.org/2000/svg"
@@ -37,22 +37,24 @@ function NewArrivals() {
         </svg>
         <div
           id="slider"
-          className="w-full h-full space-x-4 overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide"
+          className="text-black flex w-full h-full space-x-4 overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide"
         >
           {product.map((item, index) => (
-            <div
-              key={index}
-              className="text-white bg-red-400/80 backdrop-blur-sm   rounded-lg shadow-black shadow-sm  w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300"
-            >
-              <img
-                src={item.image}
-                alt={item.title}
-                onClick={window.scrollTo(0, 0)} // Adding alt for accessibility
-              />
-              {/* Uncomment if needed */}
-              <p>{item.title}</p>
-              <p>{item.price}</p>
-            </div>
+            <Link key={index} to={`/product/${item.id}`}>
+              <div className="bg-white backdrop-blur-sm rounded-sm  shadow-gray-400 shadow w-[260px] h-full inline-block  cursor-pointer overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  onClick={window.scrollTo(0, 0)} // Adding alt for accessibility
+                  className="w-full h-auto hover:scale-105 ease-in-out duration-300"
+                />
+                {/* Uncomment if needed */}
+                <p className="text-black/80 truncate text-wrap  px-2 pt-2 ">
+                  {item.title}
+                </p>
+                <p className="px-2  text-center font-medium">Rs.{item.price}</p>
+              </div>
+            </Link>
           ))}
         </div>
         <svg
@@ -74,7 +76,7 @@ function NewArrivals() {
       </div>
 
       <div className="text-center mt-6">
-        <button className="btn uppercase bg-rose-500 px-6 py-2 text-white">
+        <button className="btn uppercase bg-gradient-to-r from-rose-400 to-red-500/80 px-6 py-2 text-white">
           explore more
         </button>
       </div>
